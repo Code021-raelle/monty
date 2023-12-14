@@ -6,7 +6,6 @@
  * @counter: no used
  * @line_number: line number
  * @n: integer to push
- * 
  * Return: EXIT_SUCCESS or EXIT_FAILURE
  */
 int push(stack_t **head, unsigned int counter, unsigned int line_number, int n)
@@ -33,7 +32,6 @@ int push(stack_t **head, unsigned int counter, unsigned int line_number, int n)
  * pall - prints the stack
  * @head: stack head
  * @counter: no used
- * 
  * Return: no return
  */
 void pall(stack_t **head, unsigned int counter)
