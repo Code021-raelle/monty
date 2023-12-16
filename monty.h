@@ -64,5 +64,5 @@ void addqueue(stack_t **head, int n);
 void queue(stack_t **head, unsigned int counter);
 void stack(stack_t **head, unsigned int counter);
 
-#endif
+#endif /* MONTY_H */
 
