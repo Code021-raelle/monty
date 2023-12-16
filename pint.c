@@ -2,10 +2,12 @@
 
 /**
  * pint - Prints the value at the top of the stack
- * @stack: pointer to the top of the stack
- * @line_number: current line number in the Monty bytecode file
+ * @stack: double pointer to the top of the stack
+ * @line_number: line number where the opcode appears
  *
- * Return: Nothing.
+ * Description: prints the value at the top of the stack
+ * If the stack is empty, it prints an error message and exits
+ * with the status EXIT_FAILURE.
  */
 void pint(stack_t **stack, unsigned int line_number)
 {

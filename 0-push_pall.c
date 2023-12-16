@@ -2,17 +2,14 @@
 
 /**
  * push - pushes an element to the stack
- * @head: stack head
- * @counter: no used
+ * @stack: stack
  * @line_number: line number
  * @n: integer to push
  * Return: EXIT_SUCCESS or EXIT_FAILURE
  */
-int push(stack_t **head, unsigned int counter, unsigned int line_number, int n)
+void push(stack_t **stack, unsigned int line_number, int n)
 {
 	stack_t *new_node;
-
-	(void)counter;
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
@@ -22,30 +19,28 @@ int push(stack_t **head, unsigned int counter, unsigned int line_number, int n)
 	}
 
 	new_node->n = n;
-	new_node->next = *head;
-	*head = new_node;
-
-	return (EXIT_SUCCESS);
+	new_node->prev = NULL;
+	new_node->next = *stack;
+	if (*stack != NULL)
+		(*stack)->prev = new_node;
+	*stack = new_node;
 }
 
 /**
  * pall - prints the stack
- * @head: stack head
- * @counter: no used
+ * @stack: stack
+ * @line_number: line number
  * Return: no return
  */
-void pall(stack_t **head, unsigned int counter)
+void pall(stack_t **stack, unsigned int line_number)
 {
-	stack_t *h;
-	(void)counter;
+	stack_t *temp;
 
-	h = *head;
-	if (h == NULL)
-		return;
-	while (h)
+	temp = *stack;
+	while (temp != NULL)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%d\n", temp->n);
+		temp = temp->next;
 	}
 }
 
