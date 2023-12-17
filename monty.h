@@ -52,17 +52,17 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(void);
 void sub(stack_t **stack, unsigned int line_number);
-void div(stack_t **stack, unsigned int line_number);
-void mul(stack_t **head, unsigned int counter);
-void mod(stack_t **head, unsigned int counter);
-void pchar(stack_t **head, unsigned int counter);
-void pstr(stack_t **head, unsigned int counter);
-void rotl(stack_t **head, unsigned int counter);
-void rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void div_monty(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack);
+void rotr(stack_t **stack);
 void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
-void queue(stack_t **head, unsigned int counter);
-void stack(stack_t **head, unsigned int counter);
+void queue(stack_t **stack, unsigned int line_number);
+void stack(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
 

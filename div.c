@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div - divides the second top element of the stack
+ * div_monty - divides the second top element of the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number where the opcode appears
  *
@@ -10,7 +10,7 @@
  * If the stack contains less than two elements, it prints an error message
  * and exits with the status EXIT_FAILURE.
  */
-void div(stack_t **stack, unsigned int line_number)
+void div_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp1, *temp2;
 
