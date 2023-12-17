@@ -36,10 +36,7 @@ int main(int argc, char *argv[])
 		read_line = getline(&content, &size, file);
 		bus.content = content;
 		line_number++;
-		if (read_line > 0)
-		{
-			execute(content, &stack, line_number, file);
-		}
+		
 		free(content);
 	}
 	free_stack(stack);
